@@ -1,0 +1,9 @@
+{
+    "name": "soul-bluesky-bot",
+    "version": "1.0.0",
+    "private": true,
+    "description": "Grand Code Pope's BlueSky bot — PLT wisdom, Soulverse updates",
+    "scripts": {
+        "post": "node post.js"
+    }
+}
