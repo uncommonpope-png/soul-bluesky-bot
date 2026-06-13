@@ -11,10 +11,10 @@ const agent = new BlueskyAgent(null, {
         console.error('Auth failed');
         process.exit(1);
     }
-    const text = await agent.generateContent();
-    const posted = await agent.post(text);
+    const content = await agent.generateContent();
+    const posted = await agent.post(content);
     if (posted) {
-        console.log(`OK: ${text}`);
+        console.log(`OK: ${content.text.substring(0, 80)}...`);
         const stats = await agent.getStats();
         console.log(`Stats: ${stats.posts} posts | ${stats.followers} followers`);
     } else {
