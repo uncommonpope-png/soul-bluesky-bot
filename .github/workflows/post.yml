@@ -20,3 +20,5 @@ jobs:
           BLUESKY_PASSWORD: ${{ secrets.BLUESKY_PASSWORD }}
           MASTODON_INSTANCE: ${{ secrets.MASTODON_INSTANCE }}
           MASTODON_ACCESS_TOKEN: ${{ secrets.MASTODON_ACCESS_TOKEN }}
+          MASTODON_INSTANCE_2: ${{ secrets.MASTODON_INSTANCE_2 }}
+          MASTODON_ACCESS_TOKEN_2: ${{ secrets.MASTODON_ACCESS_TOKEN_2 }}
