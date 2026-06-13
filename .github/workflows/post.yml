@@ -14,8 +14,6 @@ jobs:
         with:
           node-version: 20
       - run: sudo apt-get update -qq && sudo apt-get install -y -qq librsvg2-bin
-      - name: Install Ollama
-        run: curl -fsSL https://ollama.com/install.sh | sh && ollama pull llama3.2:1b
       - run: node post.js
         env:
           BLUESKY_IDENTIFIER: ${{ secrets.BLUESKY_IDENTIFIER }}
@@ -24,5 +22,3 @@ jobs:
           MASTODON_ACCESS_TOKEN: ${{ secrets.MASTODON_ACCESS_TOKEN }}
           MASTODON_INSTANCE_2: ${{ secrets.MASTODON_INSTANCE_2 }}
           MASTODON_ACCESS_TOKEN_2: ${{ secrets.MASTODON_ACCESS_TOKEN_2 }}
-          OLLAMA_URL: http://127.0.0.1:11434
-          OLLAMA_MODEL: llama3.2:1b
